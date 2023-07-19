@@ -1,0 +1,54 @@
+@import './mixins/d-flex';
+@import './mixins/padMar';
+@import './mixins/text';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@for $i from 1 through 10 {
+    .col-#{$i} {
+        width: calc(100% / 10 * $i);
+    }
+}
+
+#__app {
+    position: relative;
+    width: 1336px;
+    height: 100%;
+    overflow: hidden;
+
+    button {
+        cursor: pointer;
+    }
+
+    .btn {
+        @include padMar(pad, 10px, 20px);
+        @include padMar(mar, 0, 5px);
+        @include text(18px, 400, #fff);
+        background: #5a94f7;
+        border: 1px solid #5a95f7;
+        border-radius: 3px;
+        outline: none;
+
+        &.btn-outline {
+            background: transparent;
+            color: #5a94f7;
+        }
+    }
+
+    input {
+        outline: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

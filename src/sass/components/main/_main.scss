@@ -1,0 +1,8 @@
+main{
+    position: relative;
+    width: 100%;
+    @include d_flex(_, start);
+
+    @import './aside';
+    @import './articles/article';
+}

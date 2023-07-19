@@ -1,0 +1,7 @@
+@import './home';
+@import './product';
+
+article{
+    scroll-behavior: smooth;
+    z-index: -1;
+}

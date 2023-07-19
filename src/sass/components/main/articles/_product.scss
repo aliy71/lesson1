@@ -1,0 +1,51 @@
+#product{
+    h3{
+        text-align: center;
+        @include text(32px, 400, #5a94f7)
+    }
+    .slider{
+        // width: 100%;
+        height: 500px;
+        @include padMar(mar, 20px, auto);
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .product_field{
+        & > .col-10{
+            &:first-child{
+            }
+            @include d_flex(space-around, center);
+            @include padMar(mar, 10px, 0);
+
+            .col-3{
+                position: relative;
+                & > .col-10{
+                    border-radius: 15px;
+                    overflow: hidden;
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .info{
+                    position: absolute;
+                    @include d_flex();
+                    height: 100%;
+                    z-index: 999;   
+                    color: #fff; 
+
+                    .col-10{
+                        @include padMar(pad, 10px, 20px)
+                    }
+                }
+            }
+        }
+    }
+}

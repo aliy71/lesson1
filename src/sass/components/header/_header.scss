@@ -1,0 +1,92 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    @include d_flex();
+    @include padMar(pad, 10px, 20px);
+    z-index: 1;
+
+    .col-3{
+        &:first-child{
+            @include d_flex(start, center);
+            gap: 10px;
+
+            .col-1{
+                i{
+                    position: relative;
+                    display: inline-block;
+                    width: 30px;
+                    height: 3px;
+                    background: #000;
+        
+                    &::before,
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        background: #5a95f7;
+                        cursor: pointer;
+                    }
+        
+                    &::before{
+                        top: -300%;
+                        left: 0;
+                    }
+        
+                    &::after{
+                        bottom: -300%;
+                        left: 0;
+                    }
+                }
+                cursor: pointer;
+            }
+
+            span{
+                font-size: 32px;
+            }
+        }
+
+        &:last-child{
+            text-align: end;
+        }
+    }
+
+    .col-4{
+        border: 1px solid #000;
+        border-radius: 5px;
+        @include padMar(pad, 10px, 20px);
+        input{
+            width: 90%;
+            // @include padMar(pad, 10px, 20px);
+            border: none;
+        }
+
+        .search_btn{
+            width: 7.5%;
+            border: none;
+            background: transparent;
+
+            i{
+                position: relative;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #000;
+                border-radius:50%;
+
+                &::after{
+                    position: absolute;
+                    bottom: -30%;
+                    right: -20%;
+                    content: '';
+                    width: 1px;
+                    height: 10px;
+                    background:#000;
+                    rotate: -60deg;
+                }
+            }
+        }
+    }
+}   
